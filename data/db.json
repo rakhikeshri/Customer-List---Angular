@@ -1,0 +1,68 @@
+{
+  "customers": [
+    {
+      "id": "5655",
+      "firstName": "Rakhi",
+      "lastName": "Keshri",
+      "gender": "Female",
+      "dob": "2024-09-21",
+      "mobile": 8477678899,
+      "email": "rakhi@gmail.com",
+      "address1": "Bangalore",
+      "address2": "Sarjapur",
+      "city": "Bangalore",
+      "postalCode": 998877,
+      "remarks": "",
+      "created": "2024-09-04T12:40:01.787Z",
+      "status": "Success"
+    },
+    {
+      "id": "85725",
+      "firstName": "Mohit",
+      "lastName": "Mishra",
+      "gender": "Male",
+      "dob": "2024-09-16",
+      "mobile": 9988778877,
+      "email": "mohith@gmail.com",
+      "address1": "Bangalore",
+      "address2": "Sarjapur",
+      "city": "Bangalore",
+      "postalCode": 512127,
+      "remarks": "",
+      "created": "2024-09-04T12:43:10.278Z",
+      "status": "In-progress"
+    },
+    {
+      "id": "69036",
+      "firstName": "Raj",
+      "lastName": "Shekhar",
+      "gender": "Male",
+      "dob": "2024-09-27",
+      "mobile": 7788776677,
+      "email": "raj123@gmail.com",
+      "address1": "Chittoor",
+      "address2": "",
+      "city": "Chittoor",
+      "postalCode": 512127,
+      "remarks": "",
+      "created": "2024-09-04T12:44:58.047Z",
+      "status": "Canceled"
+    },
+    {
+      "id": "28595",
+      "firstName": "Alex",
+      "lastName": "Rox",
+      "gender": "Male",
+      "dob": "2024-09-19",
+      "mobile": 6677887766,
+      "email": "alex@gmail.com",
+      "address1": "Delhi",
+      "address2": "",
+      "city": "Delhi",
+      "postalCode": 887778,
+      "remarks": "",
+      "created": "2024-09-04T13:38:24.291Z",
+      "status": "Success"
+    }
+  ]
+}

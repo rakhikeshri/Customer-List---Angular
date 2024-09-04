@@ -1,0 +1,168 @@
+.modal-dialog {
+    min-width: 1185px;
+}
+
+.modal-content {
+    padding: 48px;
+    padding-bottom: 55px;
+    padding-right: 0;
+    border: none;
+}
+
+.modal-header,
+.modal-footer {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.header {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    color: #49454F4D;
+}
+
+.left-content{
+    width: 45%;
+}
+
+.right-content{
+    width: 65%;
+}
+
+.tabs {
+    margin-bottom: 84px;
+}
+
+.form-container {
+    gap: 35px;
+}
+
+.personal-details,
+.contact-details {
+
+    padding-block: 24px;
+    text-align: center;
+    background-color: #CBCBCB1A;
+    font-size: 20px;
+    font-weight: 400;
+    color: #4B566899;
+    box-shadow: 0px 1px 2px 0px #00000040;
+
+}
+
+.active {
+    background-color: #396FFF05 !important;
+    color: #396FFF;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+    border-bottom: 1.47px solid #396FFF;
+}
+
+input {
+    max-width: 210px;
+    font-family: Roboto;
+    height: 56px;
+}
+
+.input-sm {
+    height: 56px !important;
+    max-width: 126px !important;
+}
+
+.input-lg {
+    min-width: 400px !important;
+    width: 400px !important;
+}
+
+.input-md {
+    min-width: 315px !important;
+    width: 315px !important;
+}
+
+.input-sm label {
+    color: #9B9B9B;
+}
+
+input::placeholder {
+    color: #9B9B9B;
+}
+
+input:focus,
+input:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input[type="radio"] {
+    accent-color: #396FFF;
+}
+
+.dob-container {
+    position: relative;
+    width: 210px;
+}
+
+
+.dob-img {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+}
+
+
+.dob::-webkit-calendar-picker-indicator {
+    position: relative;
+    opacity: 0 !important; /* Hide the default calendar icon */
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/* To remove the up and down arrows (spinner controls) from an <input type="number"> */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Hide spinner controls in Chrome, Safari, and Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide spinner controls in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.btn-filled {
+    background-color: #396FFF;
+    border: 1px solid #396FFF;
+    padding-block: 9px;
+    width: 158px;
+    color: #FFFFFF;
+}
+
+.btn-outlined {
+    background-color: #FFFFFF;
+    border: 1px solid #396FFF;
+    padding-block: 9px;
+    width: 158px;
+    color: #396FFF;
+}
+
+.modal-footer-container {
+    margin-top: 80px;
+}

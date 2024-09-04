@@ -1,0 +1,18 @@
+header {
+    padding: 20px 27px;
+    padding-bottom: 23px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background-color: #FFFFFF;
+    margin-left: 120px;
+}
+
+.heading1 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #4B5668;
+    margin: 0;
+    padding: 0;
+}

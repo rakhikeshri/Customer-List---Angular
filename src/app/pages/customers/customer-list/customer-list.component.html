@@ -1,0 +1,92 @@
+<div class="main-container d-flex">
+  <div>
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="w-100">
+
+    <app-header></app-header>
+
+    <div class="customer-list-container">
+      <div class="d-flex justify-content-between align-items-center sub-header">
+
+        <div class="position-relative w-fit-content search">
+          <input type="text" placeholder="Search" [(ngModel)]="searchTerm" (input)="filterCustomers()">
+          <img src="assets/search.svg" alt="search" class="search-icon">
+        </div>
+
+        <div class="d-flex gap-4">
+          <button class="d-flex gap-3 filter align-items-center">
+            <img src="assets/filter.svg" alt="filter">
+            <p class="my-auto">Filter</p>
+          </button>
+
+          <!-- <button class="new-customer" (click)="openModal()"> -->
+          <button class="new-customer" (click)="openModal()">
+            <img src="assets/new-customer.svg" alt="new customer" class="me-2">
+            New customer
+          </button>
+        </div>
+
+      </div>
+
+      <div class="d-flex" style="height: 66vh;" *ngIf="isLoading" >
+        <div class="spinner mx-auto my-auto"></div>
+      </div>
+
+
+      <div class="customer-list" *ngIf="!isLoading">
+        <table class="customers-table w-100">
+          <thead>
+            <tr>
+              <th>Cust ID</th>
+              <th>Name</th>
+              <th>DOB</th>
+              <th>Contact no</th>
+              <th>Email id</th>
+              <th>Status</th>
+              <th>Data created</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            @for (customer of filteredCustomerList; track $index) {
+
+            <tr>
+              <td>{{ customer.id }}</td>
+              <td><strong>{{ customer.firstName }}&nbsp;{{ customer.lastName }}</strong></td>
+              <td>{{ customer.dob }}</td>
+              <td>{{ customer.mobile }}</td>
+              <td>
+                <div class="truncate">{{ customer.email }}</div>
+              </td>
+              <td>
+                <div class="status success" *ngIf="customer.status == 'Success'">Success</div>
+                <div class="status in-progress" *ngIf="customer.status == 'In-progress'">In progress</div>
+                <div class="status canceled" *ngIf="customer.status == 'Canceled'">Canceled</div>
+              </td>
+              <td class="fw-normal"><img src="assets/calendar.svg" alt="calendar">&nbsp;&nbsp;{{ customer.created |
+                date:'dd/MM/yyyy' }}</td>
+              <td class="action">
+                <div class="d-flex">
+
+                  <img src="assets/add.svg" alt="add">
+                  <img src="assets/edit.svg" alt="edit">
+                  <img src="assets/view.svg" alt="view">
+                  <img src="assets/delete-bin-7-line 2.svg" alt="delete" (click)="deleteCustomer(customer.id!)">
+
+                </div>
+              </td>
+            </tr>
+
+            }
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <app-new-customer-modal (customerCreated)="onCustomerCreated($event)"></app-new-customer-modal>
+</div>

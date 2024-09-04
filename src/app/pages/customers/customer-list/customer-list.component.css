@@ -1,0 +1,136 @@
+.customer-list-container {
+    padding: 24px 30px;
+    background-color: #f7f8f9;
+    margin-left: 120px;
+}
+
+.sub-header {
+    margin-bottom: 13px;
+}
+
+.search {
+    min-width: 315px;
+}
+
+input {
+    border: none;
+    padding: 9px 13px;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #bdbdbd
+}
+
+.search-icon {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.filter {
+    border: 1px solid #396FFF;
+    border-radius: 6px;
+    width: 102px;
+    padding: 6px 11px;
+    font-size: 14px;
+    color: #5B87FF;
+    font-weight: 500;
+    background-color: #FFFFFF;
+}
+
+.new-customer {
+    background-color: #5B87FF;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #F1F1F1;
+    font-weight: 500;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.customer-list {
+    background-color: #FFFFFF;
+    padding: 19px 22px;
+    border-radius: 6px;
+}
+
+/* --------------------------------------------------------- */
+
+th:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+th:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    text-align: right;
+}
+
+.customers-table th {
+    padding: 12px 16px;
+    border: none !important;
+    font-weight: 600;
+    background-color: #f7f7f7;
+    font-size: 12px;
+}
+
+.customers-table td {
+    padding: 16px 17px;
+    border-bottom: 1px solid #f5f6f7;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #FFFFFF;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 109px;
+    white-space: nowrap;
+}
+
+.customers-table .status {
+    padding-block: 4px;
+    width: 89px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    display: grid;
+    place-content: center;
+}
+
+.status.success {
+    background-color: #EEF9E8;
+    color: #31B100;
+}
+
+.status.in-progress {
+    background-color: #FDF5EB;
+    color: #EE9021;
+}
+
+.status.canceled {
+    background-color: #FDEDED;
+    color: #E63333;
+}
+
+.action div {
+    display: flex;
+    gap: 19px;
+    justify-content: end;
+    align-items: center;
+}
+
+.action img {
+    cursor: pointer;
+}

@@ -1,0 +1,97 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="border: none;">
+        <h2 class="header" style="border: none">Customer registration</h2>
+      </div>
+      <div class="modal-body p-0">
+        <div class="d-flex p-0 m-0 d-flex justify-content-between gap-5">
+
+          <div class="d-flex justify-content-center p-0 left-content" >
+            <img src="assets/form-img.svg" alt="image" class="img-fluid">
+          </div>
+
+          <div class="p-0 m-0 right-content" >
+            <div class="d-flex tabs">
+              <div class="w-100 personal-details d-flex align-items-center justify-content-center gap-1"
+                [ngClass]="{'active' : personalDetails}">
+                <img src="assets/personal-active.svg" alt="icon" *ngIf="personalDetails" />
+                <img src="assets/personal.svg" alt="icon" *ngIf="!personalDetails" />
+                Personal Details
+              </div>
+              <div class="w-100 contact-details d-flex align-items-center justify-content-center gap-1"
+                [ngClass]="{'active' : contactDetails}">
+                <img src="assets/contact.svg" alt="icon" *ngIf="!contactDetails" />
+                <img src="assets/contact-active.svg" alt="icon" *ngIf="contactDetails" />
+                Contact Details
+              </div>
+            </div>
+
+            <form [formGroup]="personalForm" *ngIf="personalDetails">
+              <div class="d-flex flex-column gap-4">
+                <div class="d-flex gap-3">
+                  <input type="text" class="form-control" formControlName="firstName" placeholder="First name">
+                  <input type="text" class="form-control" formControlName="lastName" placeholder="Last name">
+                </div>
+                <div class="d-flex gap-3">
+                  <div class="form-control input-sm d-flex gap-2">
+                    <input type="radio" value="Male" formControlName="gender" id="male" class="my-auto h-100" />
+                    <label for="male" class="my-auto">Male</label>
+                  </div>
+                  <div class="form-control input-sm d-flex gap-2">
+                    <input type="radio" value="Female" formControlName="gender" id="female" class="my-auto h-100" />
+                    <label for="female" class="my-auto">Female</label>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 dob-container">
+                  <input type="date" class="form-control dob w-100 custom-date" formControlName="dob"
+                    placeholder="Date of birth">
+                  <img src="assets/date.svg" alt="" class="dob-img">
+                </div>
+                <div class="d-flex gap-2">
+                  <input type="number" class="form-control" formControlName="mobile" placeholder="Mobile number">
+                </div>
+                <div class="d-flex gap-2">
+                  <input type="email" class="form-control input-md" formControlName="email" placeholder="Email">
+                </div>
+              </div>
+              <div class="d-flex gap-3 modal-footer-container">
+                <button type="button" class="btn btn-outlined" data-bs-dismiss="modal">Exit</button>
+                <button type="button" class="btn btn-filled" [disabled]="personalForm.invalid"
+                  (click)="contactDetailForm()">Next</button>
+              </div>
+            </form>
+
+            <form [formGroup]="contactForm" *ngIf="contactDetails">
+              <div class="d-flex flex-column gap-4">
+                <div>
+                  <input type="text" class="form-control input-lg" formControlName="address1" placeholder="Address1">
+                </div>
+                <div>
+                  <input type="text" class="form-control input-lg" formControlName="address2" placeholder="Address2">
+                </div>
+                <div>
+                  <input type="text" class="form-control input-md" formControlName="city" placeholder="City">
+                </div>
+                <div class="d-flex gap-2">
+                  <input type="number" class="form-control" formControlName="postalCode" placeholder="Postal Code">
+                </div>
+                <div>
+                  <input type="text" class="form-control input-md" formControlName="remarks" placeholder="Remarks">
+                </div>
+                <div class="d-flex gap-3 modal-footer-container">
+                  <button type="button" class="btn btn-outlined" (click)="personalDetailForm()">Back</button>
+                  <button type="button" class="btn btn-filled" data-bs-dismiss="modal" [disabled]="contactForm.invalid"
+                    (click)="save()">Save</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

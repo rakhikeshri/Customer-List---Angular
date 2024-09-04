@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+
+body{
+    font-family: "Inter", sans-serif !important;
+}
+
+p, h1, h2, h3, h4, h5{
+    padding: 0;
+    margin: 0;
+}
+
+.fw-normal{
+    font-weight: 400 !important;
+}
+
+.fw-medium{
+    font-weight: 500 !important;
+}
+
+.fw-semibold{
+    font-weight: 600 !important;
+}
+
+.fw-bold{
+    font-weight: 700 !important;
+}
+
+.main-container{
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+@media (min-width: 1400px) {
+    .main-container{
+        max-width: 1700px !important;
+    }
+}
+
+img {
+    flex-shrink: 0;
+    flex-grow: 0;
+    align-self: center;
+}
+
+.w-fit-content{
+    width: fit-content !important;
+}
+
+.cusror-pointer{
+    cursor: pointer !important;
+}
+
+
+/* loader styles ------------------------------------------------------------------ */
+
+.spinner {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: conic-gradient(#396FFF, #FFFFFF);
+    mask: radial-gradient(farthest-side, transparent 17px, black 18px);
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
